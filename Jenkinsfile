@@ -1,17 +1,15 @@
 pipeline{
     agent any
     stages{
-        stage('build-using-scm'){
-            echo 'build';
+        stage("first stage"){
+            steps("first steps"){
+                echo "this is first step"
+            }
         }
-    
-        stage('test-using-scm'){
-            echo 'test';
-        }
-    
-        stage('deploy-using-scm'){
-            echo 'deploy';
+    }
+    post{
+        always{
+            echo "this is ending..."
         }
     }
 }
-
