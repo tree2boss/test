@@ -1,13 +1,17 @@
-node {
-    stage('build-using-scm'){
-     echo 'build';
-    }
+pipeline{
+    agent any
+    stages{
+        stage('build-using-scm'){
+            echo 'build';
+        }
     
-    stage('test-using-scm'){
-     echo 'test';
-    }
+        stage('test-using-scm'){
+            echo 'test';
+        }
     
-    stage('deploy-using-scm'){
-     echo 'deploy';
+        stage('deploy-using-scm'){
+            echo 'deploy';
+        }
     }
 }
+
